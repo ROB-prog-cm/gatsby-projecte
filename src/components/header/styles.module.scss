@@ -1,0 +1,88 @@
+
+
+.header {
+  height: 70px;
+}
+
+.header__inner {
+  margin: 0 -235px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__img {
+  padding: 10px 0;
+}
+
+.nav {
+  display: flex;
+  margin: 23px 20px;
+}
+
+.nav__link {
+  margin: 0 10px;
+
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 17px;
+
+  cursor: pointer;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.header__btn {
+  margin: -10px 0;
+  display: flex;
+}
+
+.button_1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #BC9CFF;
+  background-color: white;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-transform: uppercase;
+
+  border-radius: 22px;
+  border-color: #BC9CFF;
+  outline: none;
+
+  padding: 10px 20px;
+
+  cursor: pointer;
+}
+
+.button_1:hover {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+}
+
+.button_2 {
+  cursor: pointer;
+  margin: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  padding: 10px 20px;
+  border-radius: 22px;
+
+  border: 1px solid transparent;
+  outline: none;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-transform: uppercase;
+}
+
+.button_2:hover {
+  background: white;
+  color: #BC9CFF;
+  border: 1px solid #BC9CFF;;
+}

@@ -1,0 +1,29 @@
+
+.copyright {
+  border-top: 1px solid yellowgreen;
+
+  margin-top: 100px;
+}
+
+.copyright__inner {
+  margin: 20px 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright__text {
+  font-size: 14px;
+  line-height: 17px;
+
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.copyright__social {
+  display: flex;
+
+  .photo {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
+
