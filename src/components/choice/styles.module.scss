@@ -3,7 +3,7 @@
   background-size: 100%;
   position: relative;
   height: 1000px;
-  width: 1440px;
+  max-width: 1440px;
   background-image: url("src/assets/images/image 3.jpg");
   background-repeat: no-repeat;
 }
@@ -11,9 +11,9 @@
 .number__text {
   text-align: end;
 
-  bottom: 20px;
+  bottom: 110px;
   position: absolute;
-  right: 125px;
+  right: 150px;
 
   width: 20%;
   font-size: 14px;

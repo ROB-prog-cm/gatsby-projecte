@@ -1,11 +1,249 @@
 
-
-
 .number_inner {
+  display: flex;
+}
+
+.inner {
+  border-radius: 16px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-transform: uppercase;
+
+  color: #1F2041;
+}
+
+.horizontal_slider{
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+}
+
+.example_thumb{
+  outline: none;
+  top: -6px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.date_1 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-transform: uppercase;
+
+  color: #1F2041;
+}
+
+.panel {
+  margin-left: 90px;
+  margin-right: 40px;
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option_1 {
+  margin: 15px 0;
+  color: rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+
+  padding: 10px 12px;
+  outline: none;
+}
+
+.option_2 {
+  margin: 15px 0;
+  border-radius: 4px;
+
+  outline: none;
+  border: none;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-transform: uppercase;
+
+  color: #1F2041;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title_1 {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price_1 {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.checkbox_1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05)
+}
+
+
+.header {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #1F2041;
+}
+
+.wrap {
   display: flex;
   flex-wrap: wrap;
 }
 
-.inner {
-  width: 60%;
+.info_1 {
+  border-bottom: 1px solid  rgba(31, 32, 65, 0.1);
+  margin: 10px 0;
+  width: 228px;
+  display: flex;
+  justify-content: space-between;
+
 }
+
+.number_1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+
+  color: #1F2041;
+}
+
+.day {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.price {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.color {
+  margin: 0 10px;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  color: #BC9CFF;
+}
+.horizontal-slider{
+  color: #8ba4f9;
+}
+.info_2 {
+margin: 10px 0;
+  width: 290px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.reviews {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.departure {
+  outline: none;
+  border: none;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 7px;
+  height: 5px;
+  border-left: 4px solid #e145a3;
+  border-bottom: 4px solid #e145a3;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label:after{
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after{
+  opacity: 1;
+}
+
+
+

@@ -5,16 +5,17 @@
 }
 
 .header__inner {
-  margin: 0 -235px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .header__img {
+  margin-right: 185px;
   padding: 10px 0;
 }
 
 .nav {
+
   display: flex;
   margin: 23px 20px;
 }

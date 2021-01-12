@@ -26,11 +26,11 @@ const Choice = ({ siteTitle }: IProps) => (
             />
           </div>
           <div>
-            <input
-              className={styles.departure}
-              type="departure"
-              placeholder="Сколько гостей"
-            />
+            <select className={styles.departure}>
+              <option value="1">Сколько гостей</option>
+              <option value="2">Сколько гостей</option>
+              <option value="2">Сколько гостей</option>
+            </select>
           </div>
           <div>
             <button>подобрать номер</button>
