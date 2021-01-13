@@ -391,3 +391,17 @@ import * as React from 'react';
     </div>
   </div>
 </div>;
+
+
+<Item number={888} rating={5} price={9990} src={photo_1}></Item>
+<Item number={840} rating={4} price={9990} src={photo_2}></Item>
+<Item number={980} rating={3} price={8500} src={photo_3}></Item>
+<Item number={856} rating={5} price={7300} src={photo_4}></Item>
+<Item number={740} rating={4} price={6000} src={photo_5}></Item>
+<Item number={982} rating={3} price={5800} src={photo_6}></Item>
+<Item number={678} rating={5} price={5500} src={photo_7}></Item>
+<Item number={450} rating={4} price={5300} src={photo_8}></Item>
+<Item number={350} rating={3} price={5000} src={photo_9}></Item>
+<Item number={666} rating={5} price={5000} src={photo_10}></Item>
+<Item number={444} rating={3} price={5000} src={photo_11}></Item>
+<Item number={652} rating={3} price={5000} src={photo_11}></Item>

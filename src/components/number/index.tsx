@@ -32,26 +32,26 @@ const Star = ({ rating }) => {
   );
 };
 
-const Item = ({ number, rating, price }) => {
+const Item = ({ number, rating, price, src }) => {
   return (
     <div className={styles.info}>
       <Carousel itemsToShow={1} showArrows={false}>
         <div>
-          <img className={styles.inner} src={photo_11} alt="elem" />
+          <img className={styles.inner} src={src} alt="elem" />
         </div>
         <div>
-          <img className={styles.inner} src={photo_11} alt="elem" />
+          <img className={styles.inner} src={src} alt="elem" />
         </div>
         <div>
-          <img className={styles.inner} src={photo_11} alt="elem" />
+          <img className={styles.inner} src={src} alt="elem" />
         </div>
         <div>
-          <img className={styles.inner} src={photo_11} alt="elem" />
+          <img className={styles.inner} src={src} alt="elem" />
         </div>
       </Carousel>
       <div className={styles.info_1}>
         <span className={styles.number_1}>
-          N {number}
+          № {number}
           <span className={styles.color}>люкс</span>
         </span>
         <span className={styles.price}>{price}₽ в сутки</span>
@@ -86,10 +86,6 @@ const Rooms = ({ siteTitle }: IProps) => {
                 <span className={styles.date}>диапазон цены</span>
                 <span className={styles.price_1}>5 000₽ - 10 000₽</span>
               </div>
-              <div>
-                <input type="checkbox" id="cb1" />
-                <label htmlFor="cb1">Флажок 1</label>
-              </div>
               <ReactSlider
                 className={styles.horizontal_slider}
                 thumbClassName={styles.example_thumb}
@@ -107,24 +103,18 @@ const Rooms = ({ siteTitle }: IProps) => {
                 Стоимость за сутки пребывания в номере
               </span>
             </div>
-            <div className={styles.checkbox_1}>
-              <span className={styles.date}>правила дома</span>
-              <input type="checkbox" name="toppings" />
-              <label>Можно курить</label>
-              <input type="checkbox" name="toppings" />
-              <label>Можно с питомцами</label>
-              <input type="checkbox" name="toppings" />
-              <label>Можно пригласить гостей (до 10 человек)</label>
-            </div>
-            <div className={styles.checkbox_1}>
-              <span className={styles.date}>доступность</span>
-              <span className={styles.date}>правила дома</span>
-              <input type="checkbox" name="toppings" />
-              <label>Ширина коридоров в номере не менее 91 см.</label>
-              <input type="checkbox" name="toppings" />
-              <label>
-                На 1 этаже вас встретит специалист и проводит до номера.
-              </label>
+            <div className={styles.checkbox}>
+              <input type="checkbox" id="checkbox_1" />
+              <label htmlFor="checkbox_1">Pure CSS Checkbox</label>
+              <input type="checkbox" id="checkbox_1" />
+              <label htmlFor="checkbox_1">Pure CSS Checkbox</label>
+              <input type="checkbox" id="checkbox_1" />
+              <input type="checkbox" id="checkbox_1" />
+              <label htmlFor="checkbox_1">Pure CSS Checkbox</label>
+              <input type="checkbox" id="checkbox_1" />
+              <input type="checkbox" id="checkbox_1" />
+              <label htmlFor="checkbox_1">Pure CSS Checkbox</label>
+              <input type="checkbox" id="checkbox_1" />
             </div>
             <span className={styles.date}>удобства номера</span>
             <select className={styles.option_1}>
@@ -136,13 +126,20 @@ const Rooms = ({ siteTitle }: IProps) => {
               <option value="1"> дополнительные удобства</option>
             </select>
           </div>
+
           <div className={styles.wrap}>
-            <Item number={233} rating={3} price={22}></Item>
-            <Item number={233} rating={3} price={2222}></Item>
-            <Item number={44} rating={4}></Item>
-            <Item number={233} rating={5}></Item>
-            <Item number={23} rating={1}></Item>
-            <Item number={233} rating={2}></Item>
+            <Item number={888} rating={5} price={9990} src={photo}></Item>
+            <Item number={840} rating={4} price={9990} src={photo_1}></Item>
+            <Item number={980} rating={3} price={8500} src={photo_2}></Item>
+            <Item number={856} rating={5} price={7300} src={photo_3}></Item>
+            <Item number={740} rating={4} price={6000} src={photo_4}></Item>
+            <Item number={982} rating={3} price={5800} src={photo_5}></Item>
+            <Item number={678} rating={5} price={5500} src={photo_6}></Item>
+            <Item number={450} rating={4} price={5300} src={photo_7}></Item>
+            <Item number={350} rating={3} price={5000} src={photo_8}></Item>
+            <Item number={666} rating={5} price={5000} src={photo_9}></Item>
+            <Item number={444} rating={3} price={5000} src={photo_10}></Item>
+            <Item number={652} rating={3} price={5000} src={photo_11}></Item>
           </div>
         </div>
       </div>
