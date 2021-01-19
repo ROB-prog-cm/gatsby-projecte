@@ -69,7 +69,7 @@ const Footer = ({ siteTitle }: IProps) => (
             <div className={styles.footer__subscription_text}>
               Получайте специальные предложения и новости сервиса
             </div>
-            <input type="Email" placeholder="Email" />
+            <input className={styles.input} type="Email" placeholder="Email" />
           </div>
         </div>
       </div>

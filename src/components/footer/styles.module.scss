@@ -40,13 +40,20 @@
 }
 
 .footer__info {
-  width: 245px;
+
   text-decoration: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
 }
+.footer__text{
+  font-size: 14px;
+  line-height: 24px;
 
+  color: rgba(31, 32, 65, 0.75);
+
+  width: 275px;
+}
 .footer__logo {
   margin-bottom: 20px;
 }
@@ -104,6 +111,7 @@
 }
 
 .footer__subscription {
+  width: 250px;
 
   input {
     margin: 20px 0;
@@ -126,11 +134,14 @@
     font-size: 14px;
     line-height: 17px;
 
-    width: 65%;
+    width: 250px;
 
     color: rgba(31, 32, 65, 0.5);
   }
-
+.input{
+  width: 260px;
+  height: 44px;
+}
 }
 
 

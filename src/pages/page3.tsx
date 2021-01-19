@@ -12,6 +12,7 @@ const SimpleForm: React.FC<Props> = ({}) => {
     <div>
       {/* <Header></Header>*/}
       <Intelligence></Intelligence>
+
       {/* <Footer></Footer>
       <Copyright></Copyright>*/}
     </div>

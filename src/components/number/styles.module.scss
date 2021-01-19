@@ -1,10 +1,38 @@
 
 .number_inner {
   display: flex;
+  margin-top: 50px;
 }
 
 .inner {
   border-radius: 16px;
+}
+.span_n{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #1F2041;
+}
+
+.arrow{
+  display: flex;
+position: absolute;
+top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+}
+.next_link{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .date {
@@ -21,13 +49,31 @@
   height: 6px;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   border-radius: 3px;
+
+  :global(.track.track-0) {
+    background-color: white;
+    height: 6px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+  }
+
+  :global(.track.track-2) {
+    background-color: white;
+    height: 6px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+  }
+
 }
 
 .example_thumb {
   outline: none;
-  top: -6px;
+  top: -4px;
   border-radius: 8px;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  height: 14px;
+  width: 14px;
+  border: 2px solid white;
 }
 
 .date_1 {
@@ -44,6 +90,7 @@
   margin-left: 90px;
   margin-right: 40px;
   min-width: 270px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
 }
@@ -98,6 +145,8 @@
 }
 
 .info {
+  width: 270px;
+  height: 260px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -114,17 +163,14 @@
   color: #1F2041;
 }
 
-.wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .info_1 {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-  margin: 10px 0;
   width: 228px;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 
 }
 
@@ -138,7 +184,7 @@
 
 .day {
   margin: 10px 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 
   color: rgba(31, 32, 65, 0.5);
@@ -147,7 +193,7 @@
 .price {
   margin-bottom: 12px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 
   color: rgba(31, 32, 65, 0.5);
@@ -169,14 +215,16 @@
 }
 
 .info_2 {
-  margin: 10px 0;
-  width: 290px;
+  width: 250px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  margin-top: 10px;
 }
 
 .reviews {
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 12px;
   line-height: 18px;
 
   color: rgba(31, 32, 65, 0.5);
@@ -188,7 +236,42 @@
 }
 
 .checkbox {
+  display: flex;
+  flex-direction: column;
   margin: 10px 0;
+
+  .input {
+
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba(31, 32, 65, 0.5);
+    margin: 5px 0;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .span {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: #1F2041;
+    margin: 10px 0;
+  }
+  .span_1{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba(31, 32, 65, 0.75);
+    margin-bottom: 5px;
+  }
 }
 
 .checkbox input[type="checkbox"] {
@@ -212,12 +295,13 @@
   height: 20px;
   width: 20px;
 
-  border: 1px solid #BC9CFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   left: 0;
   top: 0;
   border-radius: 4px;
 
 }
+
 
 .checkbox label::after {
   height: 5px;
@@ -230,12 +314,10 @@
   left: 6px;
   top: 7px;
   color: #BC9CFF;
-
 }
 
 .checkbox input[type="checkbox"] + label::after {
   content: none;
-
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -243,12 +325,30 @@
 
 }
 
-.checkbox input[type="checkbox"]:focus + label::before {
-  outline: none;
+.checkbox input[type="checkbox"]:checked + label::before {
+  content: "";
+  border: 1px solid #BC9CFF;
 }
 
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: none;
 
+}
 
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+.wrap__inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+.header{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 
-
-
+  color: #1F2041;
+}
