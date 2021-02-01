@@ -1,14 +1,28 @@
-import React, { memo } from 'react';
-import Layout from '@components/main-layout';
-import Header from '@components/header';
-type Props = {};
+import { Link } from 'gatsby';
+import * as React from 'react';
+import { useState } from 'react';
+import styles from './styles.module.scss';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-const SimpleForm: React.FC<Props> = ({}) => {
+const Calendar = ({}) => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  const onChange = dates => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
   return (
-
+    <DatePicker
+      selected={startDate}
+      onChange={onChange}
+      startDate={startDate}
+      endDate={endDate}
+      selectsRange
+      inline
+    />
   );
-
-  /* return <Layout menuKey="Examples">page 1c3423d4r3</Layout>;*/
 };
 
-export default memo(SimpleForm);
+export default Calendar;

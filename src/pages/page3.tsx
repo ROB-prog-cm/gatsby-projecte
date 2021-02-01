@@ -10,11 +10,10 @@ type Props = {};
 const SimpleForm: React.FC<Props> = ({}) => {
   return (
     <div>
-      {/* <Header></Header>*/}
-      <Intelligence></Intelligence>
-
-      {/* <Footer></Footer>
-      <Copyright></Copyright>*/}
+      <Header />
+      <Intelligence />
+      <Footer />
+      <Copyright />
     </div>
   );
 

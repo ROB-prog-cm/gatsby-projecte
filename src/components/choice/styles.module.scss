@@ -52,7 +52,6 @@
     margin: 0 10px;
   }
   .departure{
-
     margin: 20px 0;
 
     width: 260px;
@@ -92,9 +91,16 @@
   }
 
   button:hover {
-    background: white;
-    color: #BC9CFF;
-    border: 1px solid #BC9CFF;;
+  opacity: 0.5;
   }
 
 }
+.button{
+  position: relative;
+}
+.photo{
+  right: 42px;
+  position: absolute;
+  bottom: 61px;
+}
+

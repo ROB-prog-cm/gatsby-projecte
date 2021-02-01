@@ -1,42 +1,38 @@
 import { Link } from 'gatsby';
-import * as React from 'react';
+import React, { useState } from 'react';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 import styles from './styles.module.scss';
+import fon from '@assets/images/image4.jpg';
 
 interface IProps {
   siteTitle: string;
 }
 
-const Modals = ({}) => {
+export const Placeholder = ({ children, text }) => {
+  return <input className={styles.input} type="Email" placeholder={text} />;
+};
+
+const Modals = ({ children, toxin, choice, choice_2 }) => {
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   return (
-    <div className="container">
-      <div id="openModal" className="modal">
-        <div className="modal__dialog">
-          <div className="modal__content">
-            <div className="modal__header">
-              <h3 className="modal__title">Авторизация</h3>
-              <a href="#close" title="Close" className="close">
-                ×
-              </a>
-            </div>
-            <div className="modal__body">
-              <span className="span">E-mail</span>
-              <input
-                className="input"
-                type="email"
-                placeholder="Введите e-mail"
-              />
-              <span className="span">Пароль</span>
-              <input
-                className="input"
-                type="email"
-                placeholder="Введите пароль"
-              />
-              <button className="button__modal">Войти</button>
-            </div>
-          </div>
+    <div className={styles.modal}>
+      <button className={styles.button_modal} onClick={onOpenModal}>
+        {choice}
+      </button>
+      <Modal open={open} onClose={onCloseModal} center>
+        {children}
+        <div className={styles.modal__footer}>
+          <h2 className={styles.modal_text}>{toxin}</h2>
+          <button className={styles.button_modal}>{choice_2}</button>
         </div>
-      </div>
+      </Modal>
     </div>
   );
 };
+
 export default Modals;

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import styles from './styles.module.scss';
 import Layout from '@components/main-layout';
+import arrow from '@assets/images/arrow_forward.svg';
 
 interface IProps {
   siteTitle: string;
@@ -33,7 +34,8 @@ const Choice = ({ siteTitle }: IProps) => (
             </select>
           </div>
           <div>
-            <button>подобрать номер</button>
+            <button className={styles.button}>подобрать номер</button>
+            <img className={styles.photo} src={arrow} alt="1" />
           </div>
         </div>
         <div className={styles.number__text}>

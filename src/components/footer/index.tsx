@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import styles from './styles.module.scss';
 import Layout from '@components/main-layout';
-import logo from 'src/assets/images/Logo.png';
+import logo from 'src/assets/images/Logo.svg';
 
 interface IProps {
   siteTitle: string;
