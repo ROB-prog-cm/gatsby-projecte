@@ -13,6 +13,7 @@
     flex-direction: column;
     display: flex;
     cursor: pointer;
+    width: 108%;
   }
 
   .input {
@@ -58,16 +59,18 @@
 
 
 .checkbox label::after {
-  height: 5px;
-  width: 9px;
+  height: 6px;
+  width: 8px;
   border-left: 2px solid;
   border-bottom: 2px solid;
 
   transform: rotate(-45deg);
 
   left: 6px;
-  top: 7px;
+  top: 5px;
   color: #BC9CFF;
+
+
 }
 
 .checkbox input[type="checkbox"] + label::after {

@@ -54,24 +54,23 @@ const Reviews = ({ reviews, text_1, text_2, avatarSrc, reviewsSrc }) => {
 const Intelligence = ({ siteTitle }: IProps) => (
   <div className={styles.intelligence}>
     <div className={'container'}>
-      <div className={styles.intelligence_photo}>
-        <div>
-          <img className={styles.photo_5} src={photo_5} alt="1" />
-        </div>
-        <div className={styles.int}>
+      <div className={styles.gog}>
+        <div className={styles.intelligence_photo}>
           <div>
-            <img className={styles.photo_6} src={photo_6} alt="1" />
+            <img className={styles.photo_5} src={photo_5} alt="1" />
           </div>
-          <div>
-            <img className={styles.photo_6} src={photo_7} alt="1" />
+          <div className={styles.int}>
+            <div>
+              <img className={styles.photo_6} src={photo_6} alt="1" />
+            </div>
+            <div>
+              <img className={styles.photo_6} src={photo_7} alt="1" />
+            </div>
           </div>
         </div>
-      </div>
-      <Example />
-      <div className={styles.unit_1}>
-        <div className={styles.inner}>
-          <span className={styles.visitors}>Сведения о номере</span>
+        <div className={styles.blog_1}>
           <div className={styles.elem_1}>
+            <span className={styles.visitors}>Сведения о номере</span>
             <Blog
               text_1={'Комфорт'}
               text_2={'Шумопоглощающие стены'}
@@ -88,69 +87,51 @@ const Intelligence = ({ siteTitle }: IProps) => (
               src={photo_3}
             />
           </div>
+          <div className={styles.unit_3}>
+            <div className={styles.visitors}>Отзывы посетителей номера</div>
+            <div className={styles.unit_2}>
+              <Reviews
+                text_1={'Мурад Сарафанов'}
+                text_2={'5 дней назад'}
+                avatarSrc={avatar_1}
+                reviewsSrc={reviews_2}
+                reviews={
+                  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                }
+              />
+              <Reviews
+                text_1={'Патрисия Стёклышкова'}
+                text_2={' Неделю назад'}
+                avatarSrc={avatar_2}
+                reviewsSrc={reviews_1}
+                reviews={
+                  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                }
+              />
+            </div>
+          </div>
         </div>
         <div className={styles.inner_2}>
           <div className={styles.elem_2}>
             <img className={styles.photo_2} src={photo_4} alt="1" />
           </div>
           <div className={styles.ulli_1}>
-            <ul className={styles.list}>
-              <li className={cx(styles.list_item, styles.color_1)}>
-                Великолепно
-              </li>
-              <li className={cx(styles.list_item, styles.color_2)}>Хорошо</li>
-              <li className={cx(styles.list_item, styles.color_3)}>
-                Удовлетворительно
-              </li>
-              <li className={cx(styles.list_item, styles.color_4)}>
-                Разочарован
-              </li>
+            <ul>
+              <ul className={styles.list}>
+                <li className={cx(styles.list_item, styles.color_1)}>
+                  Великолепно
+                </li>
+                <li className={cx(styles.list_item, styles.color_2)}>Хорошо</li>
+                <li className={cx(styles.list_item, styles.color_3)}>
+                  Удовлетворительно
+                </li>
+                <li className={cx(styles.list_item, styles.color_4)}>
+                  Разочарован
+                </li>
+              </ul>
             </ul>
-          </div>
-        </div>
-        <Square />
-      </div>
-      <div className={styles.unit_3}>
-        <div className={styles.visitors}>Отзывы посетителей номера</div>
-        <div className={styles.unit_2}>
-          <Reviews
-            text_1={'Мурад Сарафанов'}
-            text_2={'5 дней назад'}
-            avatarSrc={avatar_1}
-            reviewsSrc={reviews_2}
-            reviews={
-              'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-            }
-          />
-          <Reviews
-            text_1={'Патрисия Стёклышкова'}
-            text_2={' Неделю назад'}
-            avatarSrc={avatar_2}
-            reviewsSrc={reviews_1}
-            reviews={
-              'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
-            }
-          />
-        </div>
-        <div className={styles.inner_2}>
-          <ul className={styles.list}>
-            <span className={styles.regulations_1}>Правила</span>
-            <li className={cx(styles.list_item, styles.color_5)}>
-              Нельзя с питомцами
-            </li>
-            <li className={cx(styles.list_item, styles.color_5)}>
-              Без вечеринок и мероприятий
-            </li>
-            <li className={cx(styles.list_item, styles.color_5)}>
-              Время прибытия — после 13:00, а выезд до 12:00
-            </li>
-          </ul>
-          <div className={styles.regulations}>
-            <span className={styles.regulations_1}>Отмена</span>
-            <div className={styles.reviews_2}>
-              Бесплатная отмена в течение 48 ч. После этого при отмене не
-              позднее чем за 5 дн. до прибытия вы получите полный возврат за
-              вычетом сбора за услуги.
+            <div className={styles.blog_2}>
+              <Square />
             </div>
           </div>
         </div>

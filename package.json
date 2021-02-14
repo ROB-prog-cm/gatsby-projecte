@@ -16,6 +16,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "clsx": "^1.1.1",
+    "date-fns": "^2.17.0",
     "effector": "^20.16.2",
     "effector-react": "^20.7.4",
     "effector-react-form": "^2.0.21",
@@ -38,6 +39,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.5",
     "@types/classnames": "^2.2.10",
     "@types/lodash.isequal": "^4.5.5",
     "@types/node": "^13.1.5",

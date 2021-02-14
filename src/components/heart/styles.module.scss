@@ -1,7 +1,67 @@
-.span_1 {
-  font-family: Montserrat, sans-serif;
-  font-size: 10px;
-  line-height: 12px;
+.checkbox {
+  width: 10px;
+}
 
-  color: #BC9CFF;
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+}
+
+.checkbox label::before {
+  height: 20px;
+  width: 40px;
+
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  left: 4px;
+  top: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: url('src/assets/images/heart.svg') center no-repeat;
+}
+
+.checkbox label::after {
+  height: 9px;
+  width: 10px;
+  left: 11px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+.checkbox input[type="checkbox"]:checked + label::before {
+  content: "";
+  border: 1px solid #BC9CFF;
+  background: url('src/assets/images/svg.svg') center no-repeat;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: none;
+}
+
+.span_1 {
+  font-size: 20px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+input:checked + label span + span {
+  color: red;
 }

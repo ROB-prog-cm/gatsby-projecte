@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 import styles from './styles.module.scss';
-import Layout from '@components/main-layout';
 import arrow from '@assets/images/arrow_forward.svg';
+import Button from '@components/button';
 
 interface IProps {
   siteTitle: string;
@@ -27,11 +27,7 @@ const Choice = ({ siteTitle }: IProps) => (
             />
           </div>
           <div>
-            <select className={styles.departure}>
-              <option value="1">Сколько гостей</option>
-              <option value="2">Сколько гостей</option>
-              <option value="2">Сколько гостей</option>
-            </select>
+            <Button />
           </div>
           <div>
             <button className={styles.button}>подобрать номер</button>

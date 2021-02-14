@@ -1,6 +1,4 @@
-.modal {
 
-}
 :global(.react-responsive-modal-closeButton){
   display: none;
 }
@@ -33,13 +31,13 @@
 
 .modal__footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .modal_text {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  line-height: 18px;
+
 
   color: #000000;
   font-weight: normal;
@@ -54,11 +52,11 @@
   font-size: 14px;
   line-height: 24px;
 
-  color: rgba(31, 32, 65, 0.25);;
+  color: rgba(31, 32, 65, 0.25);
 
   outline: none;
 
-  padding: 15px 15px;
+  padding: 0 15px;
 
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;

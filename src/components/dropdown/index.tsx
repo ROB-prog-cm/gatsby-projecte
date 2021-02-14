@@ -3,18 +3,21 @@ import * as React from 'react';
 import styles from './styles.module.scss';
 import Rooms from '@components/rooms';
 import { useState } from 'react';
+import cx from 'clsx';
 
-const Dropdown = ({ children, title, items = [] }) => {
+const Dropdown = ({ children, title, items = [], triggerClassName }) => {
   const [open, setOpen] = useState(false);
   const [selection, setSelection] = useState([]);
   const toggle = () => setOpen(!open);
 
-  function handleOnClick(item) {}
-
   return (
-    <div className={styles.dd_wrapper}>
+    <div className={cx(styles.dd_wrapper)}>
       <div
-        className={styles.dd_header}
+        className={cx(
+          styles.dd_header,
+          triggerClassName,
+          open ? styles.dd_header__open : null
+        )}
         tabIndex={0}
         role="button"
         onKeyPress={() => toggle(!open)}

@@ -3,17 +3,22 @@ import React, { useState } from 'react';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import styles from './styles.module.scss';
-import fon from '@assets/images/image4.jpg';
 
 interface IProps {
   siteTitle: string;
 }
 
-export const Placeholder = ({ children, text }) => {
+export const Input = ({ text }) => {
   return <input className={styles.input} type="Email" placeholder={text} />;
 };
 
-const Modals = ({ children, toxin, choice, choice_2 }) => {
+const Modals = ({
+  children,
+  toxin,
+  triggerContentBtn,
+  confirmContentBtn,
+  classNameTriggerBtn = styles.button_modal,
+}) => {
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -21,14 +26,14 @@ const Modals = ({ children, toxin, choice, choice_2 }) => {
 
   return (
     <div className={styles.modal}>
-      <button className={styles.button_modal} onClick={onOpenModal}>
-        {choice}
+      <button className={classNameTriggerBtn} onClick={onOpenModal}>
+        {triggerContentBtn}
       </button>
       <Modal open={open} onClose={onCloseModal} center>
         {children}
         <div className={styles.modal__footer}>
           <h2 className={styles.modal_text}>{toxin}</h2>
-          <button className={styles.button_modal}>{choice_2}</button>
+          <button className={styles.button_modal}>{confirmContentBtn}</button>
         </div>
       </Modal>
     </div>

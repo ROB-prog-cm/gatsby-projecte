@@ -4,6 +4,17 @@ import { useState } from 'react';
 import styles from './styles.module.scss';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+/*
+
+function addMonths(date, months) {
+  const d = date.getDate();
+  date.setMonth(date.getMonth() + +months);
+  if (date.getDate() != d) {
+    date.setDate(0);
+  }
+  return date;
+}
+*/
 
 const Calendar = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -13,6 +24,7 @@ const Calendar = ({}) => {
     setStartDate(start);
     setEndDate(end);
   };
+
   return (
     <DatePicker
       selected={startDate}
@@ -20,7 +32,6 @@ const Calendar = ({}) => {
       startDate={startDate}
       endDate={endDate}
       selectsRange
-      inline
     />
   );
 };

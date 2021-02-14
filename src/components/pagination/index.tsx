@@ -6,6 +6,7 @@ const Paginate = ({}) => {
   function handlePageClick(data) {
     console.log(data);
   }
+
   return (
     <ReactPaginate
       nextLabel={
@@ -29,7 +30,7 @@ const Paginate = ({}) => {
       pageRangeDisplayed={2}
       onPageChange={handlePageClick}
       containerClassName={styles.pagination}
-      activeClassName={'active'}
+      activeClassName={styles.active}
       nextLinkClassName={styles.next_link}
     />
   );

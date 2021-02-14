@@ -34,13 +34,7 @@ const Star = ({ rating }) => {
   );
 };
 
-const Button = ({}) => {
-  /*  return (
-
-    )*/
-};
-
-const Item = ({ number, rating, price, src, reviews, luxury }) => {
+const Item = ({ number, rating, price, src, reviews, luxury, priceText }) => {
   return (
     <div className={styles.info}>
       <Carousel itemsToShow={1} showArrows={false}>
@@ -63,7 +57,9 @@ const Item = ({ number, rating, price, src, reviews, luxury }) => {
           {number}
           <span className={styles.color}>{luxury}</span>
         </span>
-        <span className={styles.price}>{price}₽ в сутки</span>
+        <div className={styles.price}>
+          {price}₽ <span className={styles.price_2}>{priceText}</span>
+        </div>
       </div>
       <div className={styles.info_2}>
         <Star rating={rating} />
@@ -84,30 +80,89 @@ const Rooms = ({ siteTitle }: IProps) => {
           number={888}
           rating={5}
           price={9990}
+          priceText={'в сутки'}
           reviews={145}
           src={photo}
           luxury={'люкс'}
         />
-        <Item number={840} rating={4} price={9990} reviews={65} src={photo_1} />
+        <Item
+          number={840}
+          rating={4}
+          price={9990}
+          priceText={'в сутки'}
+          reviews={65}
+          src={photo_1}
+        />
         <Item
           number={980}
           rating={3}
           price={8500}
+          priceText={'в сутки'}
           reviews={35}
           src={photo_2}
           luxury={'люкс'}
         />
-        <Item number={856} rating={5} price={7300} reviews={19} src={photo_3} />
-        <Item number={740} rating={4} price={6000} reviews={44} src={photo_4} />
-        <Item number={982} rating={3} price={5800} reviews={56} src={photo_5} />
-        <Item number={678} rating={5} price={5500} reviews={45} src={photo_6} />
-        <Item number={450} rating={4} price={5300} reviews={39} src={photo_7} />
-        <Item number={350} rating={3} price={5000} reviews={77} src={photo_8} />
-        <Item number={666} rating={5} price={5000} reviews={25} src={photo_9} />
+        <Item
+          number={856}
+          rating={5}
+          price={7300}
+          priceText={'в сутки'}
+          reviews={19}
+          src={photo_3}
+        />
+        <Item
+          number={740}
+          rating={4}
+          price={6000}
+          priceText={'в сутки'}
+          reviews={44}
+          src={photo_4}
+        />
+        <Item
+          number={982}
+          rating={3}
+          price={5800}
+          priceText={'в сутки'}
+          reviews={56}
+          src={photo_5}
+        />
+        <Item
+          number={678}
+          rating={5}
+          price={5500}
+          priceText={'в сутки'}
+          reviews={45}
+          src={photo_6}
+        />
+        <Item
+          number={450}
+          rating={4}
+          price={5300}
+          priceText={'в сутки'}
+          reviews={39}
+          src={photo_7}
+        />
+        <Item
+          number={350}
+          rating={3}
+          price={5000}
+          priceText={'в сутки'}
+          reviews={77}
+          src={photo_8}
+        />
+        <Item
+          number={666}
+          rating={5}
+          price={5000}
+          priceText={'в сутки'}
+          reviews={25}
+          src={photo_9}
+        />
         <Item
           number={444}
           rating={3}
           price={5000}
+          priceText={'в сутки'}
           reviews={15}
           src={photo_10}
         />
@@ -115,6 +170,7 @@ const Rooms = ({ siteTitle }: IProps) => {
           number={652}
           rating={3}
           price={5000}
+          priceText={'в сутки'}
           reviews={55}
           src={photo_11}
         />

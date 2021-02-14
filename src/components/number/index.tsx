@@ -6,6 +6,7 @@ import Rooms from '@components/rooms';
 import Dropdown from '@components/dropdown';
 import Checkbox from '@components/checkbox';
 import Calendar from '@components/calendar';
+import Button from '@components/button';
 
 interface IProps {
   siteTitle: string;
@@ -72,7 +73,36 @@ const LeftPanel = ({ siteTitle }: IProps) => {
                 }
               />
             </div>
-            <Dropdown title={'дополнительные удобства'}>
+            <span className={styles.option_2}>удобства номера</span>
+            <Dropdown
+              triggerClassName={styles.trigger}
+              title={'2 спальни, 2 кровати...'}
+            >
+              <div className={styles.inner}>
+                <div className={styles.inner_2}>
+                  <span className={styles.text_button}>спальни</span>
+                  <span className={styles.text_button}>кровати</span>
+                  <span className={styles.text_button}>ванные комнаты</span>
+                </div>
+                <div className={styles.inner_2}>
+                  <div className={styles.inner_2}>
+                    <div className={styles.wrap}>
+                      <Button />
+                    </div>
+                    <div className={styles.wrap}>
+                      <Button />
+                    </div>
+                    <div className={styles.wrap}>
+                      <Button />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Dropdown>
+            <Dropdown
+              triggerClassName={styles.trigger_2}
+              title={'дополнительные удобства'}
+            >
               <div className={styles.checkbox}>
                 <Checkbox
                   id_checkbox={'checkbox_6'}

@@ -1,6 +1,5 @@
 .unit_1 {
   display: flex;
-  justify-content: space-around;
 }
 
 .unit_2 {
@@ -32,6 +31,7 @@
 .element {
   display: flex;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  width: 280px;
 }
 
 .element:nth-last-child(1) {
@@ -48,7 +48,6 @@
 }
 
 .text_2 {
-  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
 
@@ -56,6 +55,7 @@
 }
 
 .text_1 {
+  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
 
@@ -173,6 +173,7 @@
   border-radius: 6px;
 }
 
+
 .color_1:after {
   background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
 }
@@ -197,16 +198,24 @@
 .color_5:after {
   background: rgba(31, 32, 65, 0.25);
 }
-.intelligence_photo{
+
+.intelligence_photo {
   display: flex;
 }
 
-.int{
+.int {
   display: flex;
   flex-direction: column;
 }
 
 .photo_6 {
+  display: flex;
+}
+
+.blog_1 {
+  display: flex;
+}
+.intelligence{
   display: flex;
 }
 
